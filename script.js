@@ -11,10 +11,10 @@ window.addEventListener("load", () => {
 
             // createBubbles(index);
 
-            pad.style.animation = "equalizer 100ms";
+            pad.classList.add("drum");
 
-            pad.addEventListener("animationend", function () {
-                pad.style.animation = "";
+            pad.addEventListener("transitionend", () => {
+                pad.classList.remove("drum");
             });
         });
     });
