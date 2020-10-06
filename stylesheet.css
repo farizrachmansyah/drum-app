@@ -21,9 +21,17 @@ header h1 {
 }
 
 header p {
+    margin-bottom: 30px;
     font-size: 20px;
     font-weight: 300;
 }
+
+/* header .copyright {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+} */
 
 .apps {
     display: flex;
@@ -46,20 +54,23 @@ header p {
 }
 
 .pads {
-/*     width: 100%;
-    display: flex; */
+    /* width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
     z-index: 2;
 }
 
 .pads > div {
     display: inline-block;
+    border: 10px solid #111;
+    border-radius: 10px;
+    background-color: rgba(238, 238, 238, 0.2);
     margin: 10px;
     width: 150px;
     height: 150px;
     cursor: pointer;
-    border: 10px solid #111;
-    border-radius: 10px;
-    background-color: rgba(238, 238, 238, 0.2);
     transition: transform 0.1s;
 }
 
