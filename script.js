@@ -1,37 +1,37 @@
-window.addEventListener("load", () => {
-    const sounds = document.querySelectorAll(".sound");
-    const pads = document.querySelectorAll(".pads div");
-    const visual = document.querySelector(".visual");
-    const colors = ["#60d394", "#d36060", "#c060d3", "#d3d160", "#6860d3", "#60bcd3"];
+function app() {
+    window.addEventListener("load", () => {
+        const sounds = document.querySelectorAll(".sound");
+        const pads = document.querySelectorAll(".padKey");
 
-    pads.forEach((pad, index) => {
-        pad.addEventListener("click", function () {
-            sounds[index].play();
-            sounds[index].currentTime = 0;
+        pads.forEach((pad, index) => {
+            pad.addEventListener("click", function () {
+                sounds[index].play();
+                sounds[index].currentTime = 0;  // rewind to the start (bikin audionya bisa diklik berkali kali)
 
-            // createBubbles(index);
+                pad.classList.add("drum");
 
-            pad.classList.add("drum");
-
-            pad.addEventListener("transitionend", () => {
-                pad.classList.remove("drum");
+                pad.addEventListener("transitionend", () => {
+                    pad.classList.remove("drum");
+                });
             });
         });
     });
 
-    // functions to make the bubbles
-    // under constructions
+    window.addEventListener("keydown", function (e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.padKey[data-key="${e.keyCode}"]`);
 
-    // const createBubbles = (index) => {
-    //     const bubbles = document.createElement("div");
-    //     visual.appendChild(bubbles);
-    //     bubbles.style.backgroundColor = colors[index];
-    //     bubbles.style.animation = "jump 1s";
+        if (!audio && !key) return;
 
-    //     bubbles.addEventListener("animationend", function () {
-    //         bubbles.style.animation = "";
-    //     });
-    // };
+        audio.play();
+        audio.currentTime = 0;
 
+        key.classList.add("drum");
 
-});
+        key.addEventListener("transitionend", () => {
+            key.classList.remove("drum");
+        });
+    });
+}
+
+app();
