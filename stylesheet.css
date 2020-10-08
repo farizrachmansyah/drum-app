@@ -115,6 +115,10 @@ footer {
 }
 
 @media screen and (max-width: 375px) {
+    .apps {
+        height: 80vh;
+    }
+    
     .pads {
         justify-content: space-evenly;
     }
