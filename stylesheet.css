@@ -37,7 +37,7 @@ header p {
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url("./assets/bg-img.jpg");
+        url("./bg-img.jpg");
     background-size: cover;
     background-position: top;
 }
