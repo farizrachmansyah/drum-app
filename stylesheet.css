@@ -112,6 +112,10 @@ footer {
         width: 125px;
         height: 125px;
     }
+    
+    .padKey span {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -122,10 +126,6 @@ footer {
     .padKey {
         width: 110px;
         height: 110px;
-    }
-
-    .padKey span {
-        display: none;
     }
 }
 
