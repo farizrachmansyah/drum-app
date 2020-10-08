@@ -17,50 +17,68 @@
     <body>
         <div class="apps">
             <header>
-                <h1>Music Tap.</h1>
-                <p>Make your own music by only tapping the box!</p>
+                <h1>Drum Tap.</h1>
+                <p>Make your own instrument by only tapping the box!</p>
+                <!-- <p class="copyright">created with &hearts; from Cilnagkap</p> -->
             </header>
             <div class="visual"></div>
 
             <div class="pads">
-                <div class="pad1">
+                <div data-key="65" class="padKey">
+                    <span>A</span>
                     <audio
+                        data-key="65"
                         class="sound"
-                        src="./assets/bubbles.mp3"
+                        src="./assets/bass.mp3"
                     ></audio>
                 </div>
-                <div class="pad2">
+                <div data-key="83" class="padKey">
+                    <span>S</span>
                     <audio
+                        data-key="83"
                         class="sound"
-                        src="./assets/clay.mp3"
+                        src="./assets/bongo1.mp3"
                     ></audio>
                 </div>
-                <div class="pad3">
+                <div data-key="68" class="padKey">
+                    <span>D</span>
                     <audio
+                        data-key="68"
                         class="sound"
-                        src="./assets/confetti.mp3"
+                        src="./assets/bongo2.mp3"
                     ></audio>
                 </div>
-                <div class="pad4">
+                <div data-key="74" class="padKey">
+                    <span>J</span>
                     <audio
+                        data-key="74"
                         class="sound"
-                        src="./assets/glimmer.mp3"
+                        src="./assets/gatau.mp3"
                     ></audio>
                 </div>
-                <div class="pad5">
+                <div data-key="75" class="padKey">
+                    <span>K</span>
                     <audio
+                        data-key="75"
                         class="sound"
-                        src="./assets/moon.mp3"
+                        src="./assets/kick.mp3"
                     ></audio>
                 </div>
-                <div class="pad6">
+                <div data-key="76" class="padKey">
+                    <span>L</span>
                     <audio
+                        data-key="76"
                         class="sound"
-                        src="./assets/ufo.mp3"
+                        src="./assets/snare.mp3"
                     ></audio>
                 </div>
             </div>
+
+            <footer>
+                <p>created with &hearts; from Cilnagkap</p>
+            </footer>
         </div>
+
         <script src="./script.js"></script>
     </body>
 </html>
